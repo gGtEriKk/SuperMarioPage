@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;700&family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <title>Site Mario Bros</title>
+</head>
+
+<body>
+
+    <div class="video-box">
+        <video src="video.mp4" autoplay muted loop></video>
+        <div class="video-mask"></div>
+    </div>
+
+    <div class="main-box">
+        <img src="logo.png" alt="logo do super mario" class="super-mario-logo" />
+        <p>Encanadores Mario & Luigi - Resolvendo Seus Problemas Com Estilo!</p>
+        <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
+            ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a
+            vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+        <button onclick="preencherFormulario()">Fale conosco</button>
+    </div>
+    <img src="mario.png" alt="logo-mario-luigi" class="mario-and-luigi-img" />
+
+    <form class="fale-conosco" action="erikgomesdev@gmail.com" method="POST">
+        <input placeholder="Seu nome" type="text" name="name"/>
+        <input placeholder="Seu telefone" type="tel" name="phone"/>
+        <textarea placeholder="Digite seu problema aqui..." name="info"></textarea>
+        <button class="form-button" enviarFormulario()>Enviar formulário</button>
+    </form>
+
+    <div class="form-mask"></div>
+
+</body>
+
+<script>
+    let form = document.querySelector(".fale-conosco")
+    let mask = document.querySelector(".form-mask")
+
+    function preencherFormulario() {
+        form.style.left = "780px"
+        mask.style.visibility = "visible"
+    }
+
+    function enviarFormulario() {
+        form.style.left = "-320px"
+        mask.style.visibility = "hidden"
+    }
+
+</script>
+
+</html>
